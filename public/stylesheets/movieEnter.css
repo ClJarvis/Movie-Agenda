@@ -148,14 +148,76 @@ CONTENT
 
 .content-here {
   background-color: white;
-  height: 600px;
+  height: 850px;
+  padding-top: 100px;
 }
 
 .entering-data {
-  /*border: 3px solid #DC4C18;*/
-  border-radius: 10px;
   padding: 30px;
-  float: center;
   background-color: white;
+  max-width: 30%;
+  margin: 0 auto;
+  display: block;
+  background-color: #FEF8A0;
+  color: #DC4C18;
+  font-family: 'Roboto';
 }
 
+.formfield {
+  padding-bottom: 15px;
+}
+
+.check-space {
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #FF3823;
+}
+
+/************************
+FOOTER
+************************/
+
+#footerWrapp {
+  margin-top: 65px;
+  position: relative;
+}
+
+#topFooter {
+  background-color: #3a3a3a;
+  padding: 50px 0 40px 0;
+}
+
+.footerUl {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.reading {
+  margin-right: 50px;
+}
+
+li {
+  float: left;
+}
+
+.footerUl li a {
+  color: #C0C0C0;
+  display: block;
+  padding: 0 20px;
+  border-right: 1px solid;
+  font-family: 'Roboto';
+}
+
+li a:hover {
+  color: #FEFAC0;
+  text-decoration: none;
+}
+
+.footerUl li:last-child a {
+  border-right: none;
+
+}

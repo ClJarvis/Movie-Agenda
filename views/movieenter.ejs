@@ -4,7 +4,6 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel='stylesheet' href='/stylesheets/movieEnter.css' />
   </head>
@@ -50,53 +49,55 @@
         <p>E</p>
       </span>
     </div>
+
+
     <div class="content-here">
       <div class="entering-data">
-      <h1>Enter a New Film</h1>
+      <h2>Enter a New Film</h2>
         <form method="POST" action="/movie" id="movieForm">
 
           <input type="hidden" name="db_id" value="<%= themovie._id %>">
 
           <div class="formfield sides-cat">
-            <div class="formfield--prompt">Title:</div>
+            <div class="formfield--prompt">Title</div>
             <input type="text" id="meTitle" name="title" value="<%= themovie.title %>">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Director:</div>
-            <input type="text" id="meDirector" name="director" value="<%= themovie.director %>">
+            <div class="formfield--prompt">Director</div>
+            <input type="text" id="meDirector" name="director"><%= themovie.director %>
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Genre:</div>
+            <div class="formfield--prompt">Genre</div>
             <input type="text" id="meGenre" name="genre" value="<%= themovie.genre %>">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Theater:</div>
+            <div class="formfield--prompt">Theater</div>
             <input type="text" id="meTheater" name="theater" value="<%= themovie.theater %>">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Fellow Moviegoers:</div>
+            <div class="formfield--prompt">Fellow Moviegoers</div>
             <input type="text" id="meMoviegoers" name="fellow_moviegoers" value="<%= themovie.fellow_moviegoers %>">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Date Viewed:</div>
+            <div class="formfield--prompt">Date Viewed</div>
             <input type="text" id="meDate"
               name="date_seen"
               value="">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Rating:</div>
+            <div class="formfield--prompt">Rating</div>
             <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
           </div>
 
           <div class="formfield">
-            <div class="formfield--prompt">Favorite:</div>
-            <input type="checkbox" id="meFavorite" name="favorite">
+            <div class="formfield--prompt"></div>
+            <input type="checkbox" id="meFavorite" name="favorite"><span class="check-space">Favorite</span>
           </div>
 
         <input class="submitButton center-it" type="submit"></input>
@@ -106,7 +107,22 @@
   </div>
 
 
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <div id="footWrapp">
+    <div id="topFooter">
+          <div class="row footerNav">
+            <ul class="footerUl">
+              <li class="reading">Some Recommended Reading:</li>
+            </ul>
+            <ul class="footerUl">
+              <li><a href="http://www.avclub.com">The A.V. Club</a></li>
+              <li><a href="http://www.vulture.com">Vulture</a></li>
+              <li><a href="http://www.pastemagazine.com">Paste</a></li>
+              <li><a href="http://www.imdb.com">IMDB</a></li>
+              <li><a href="http://www.metacritic.com">Metacritic</a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
   </body>
 </html>
 
