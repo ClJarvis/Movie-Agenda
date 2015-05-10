@@ -1,72 +1,127 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel='stylesheet' href='/stylesheets/movieEnter.css' />
   </head>
   <body>
-    <h1>Enter a New Film</h1>
-    <div class="entering-data">
-      <form method="POST" action="/" id="movieForm">
 
-        <input type="hidden" name="db_id" value="<%= todo._id %>">
+  <div class="fashion-up">
+  <nav class="navbar navbar-default nav-container">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-        <div class="formfield sides-cat">
-          <div class="formfield--prompt">Title:</div>
-          <input type="text" id="meTitle" name="title" value="<%= themovie.title %>">
+      <div class="collapse navbar-collapse nav-dothis" id="bs-example-navbar-collapse-1">
+        <div class="space">
+          <ul class="nav navbar-nav space">
+            <li><a href="#">Movie Agenda <span class="sr-only">(current)</span></a></li>
+          </ul>
         </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Director:</div>
-          <textarea id="meDirector" name="director"><%= themovie.director %></textarea>
+        <div>
+          <ul class="nav navbar-nav to-right spread-out">
+            <li><a href="/movie/">Enter <span class="sr-only">(current)</span></a></li>
+            <li><a href="/user/profile">Profile <span class="sr-only">(current)</span></a></li>
+            <li><a href="/movie/list">List <span class="sr-only">(current)</span></a></li>
+          </ul>
         </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Genre:</div>
-          <input type="text" id="meGenre" name="genre" value="<%= themovie.genre %>">
-        </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Theater:</div>
-          <input type="text" id="meTheater" name="theater" value="<%= themovie.theater %>">
-        </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Fellow Moviegoers:</div>
-          <input type="text" id="meMoviegoers" name="moviegoers" value="<%= themovie.fellow_moviegoers %>">
-        </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Date Viewed:</div>
-          <input type="text" id="meDate"
-            name="date_seen"
-            value="<%= themovie.date_seen.getMonth() + 1 %> / <%= themovie.date_seen.getDate() %> / <%= themovie.date_seen.getFullYear() %>">
-        </div>
-
-        <div class="btn-group">
-          <button type="menu" menu="dropdown-menu">Have Seen or To See:</button>
-          <menu type="context" id="dropdown-menu" name="whetherSeen">
-            <menuitem label="Blank">
-            <menuitem label="Have Seen">
-            <menuitem label="To See">
-          </menu>
-        </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Rating:</div>
-          <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
-        </div>
-
-        <div class="formfield">
-          <div class="formfield--prompt">Favorite:</div>
-          <input type="checkbox" id="meFavorite" name="favorite">
-        </div>
-
+        <form class="navbar-form navbar-left" role="search">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
     </div>
-      <input class="submitButton center-it" type="submit"></input>
-      </form>
+  </nav>
+  </div>
+
+    <!-- </div> -->
+    <div id="banner-photo">
+      <span>
+        <p>E</p>
+      </span>
     </div>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+
+    <div class="content-here">
+      <div class="entering-data">
+      <h2>Enter a New Film</h2>
+        <form method="POST" action="/movie" id="movieForm">
+
+          <input type="hidden" name="db_id" value="<%= themovie._id %>">
+
+          <div class="formfield sides-cat">
+            <div class="formfield--prompt">Title</div>
+            <input type="text" id="meTitle" name="title" value="<%= themovie.title %>">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Director</div>
+            <input type="text" id="meDirector" name="director"><%= themovie.director %>
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Genre</div>
+            <input type="text" id="meGenre" name="genre" value="<%= themovie.genre %>">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Theater</div>
+            <input type="text" id="meTheater" name="theater" value="<%= themovie.theater %>">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Fellow Moviegoers</div>
+            <input type="text" id="meMoviegoers" name="fellow_moviegoers" value="<%= themovie.fellow_moviegoers %>">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Date Viewed</div>
+            <input type="text" id="meDate"
+              name="date_seen"
+              value="">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt">Rating</div>
+            <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
+          </div>
+
+          <div class="formfield">
+            <div class="formfield--prompt"></div>
+            <input type="checkbox" id="meFavorite" name="favorite"><span class="check-space">Favorite</span>
+          </div>
+
+        <input class="submitButton center-it" type="submit"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footWrapp">
+    <div id="topFooter">
+          <div class="row footerNav">
+            <ul class="footerUl">
+              <li class="reading">Some Recommended Reading:</li>
+            </ul>
+            <ul class="footerUl">
+              <li><a href="http://www.avclub.com">The A.V. Club</a></li>
+              <li><a href="http://www.vulture.com">Vulture</a></li>
+              <li><a href="http://www.pastemagazine.com">Paste</a></li>
+              <li><a href="http://www.imdb.com">IMDB</a></li>
+              <li><a href="http://www.metacritic.com">Metacritic</a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
   </body>
 </html>
-
