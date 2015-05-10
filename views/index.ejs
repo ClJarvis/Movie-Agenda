@@ -5,14 +5,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/responsive.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
   </head>
   <body class="film">
     <div class="container-fluid" >
 
+      <div class="row"><!--filler_row -->
+  <div class="col-md-12" id="filler">
+  </div>
+</div><!--end filler row-->
+
+
       <!--nav class="navbar navbar-default">
 
-          <!-- Brand and toggle get grouped for better mobile display -->
+          <! Brand and toggle get grouped for better mobile display -->
           <!--div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
@@ -34,9 +41,10 @@
 
 
 
+    <div class="row">
 
-      <div id="login">
-          <p>Welcome to <%= title %> <i class="fa fa-film fa-2x"></i></p>
+      <div class="col-md-4" id="login">
+        <p>Welcome to <%= title %> <i class="fa fa-film fa-2x"></i></p>
 
           <a href="/user/profile">View profile</a> | <a href="/user/logout">Logout</a>
           <h4>Please log in below or  <a href="/user/register">register</a> for a new account. </h4>
@@ -56,27 +64,38 @@
             <P>
           </form>
       </div><!--login end-->
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+    </div><!--row end-->
 
-      <div><P><P>
-      </div>
+<div class="row"><!--circle_row -->
+  <div class="col-md-12" id="filler">
+  </div>
+</div><!--end filler row-->
 
-        <div id="banner-photo">
+
+<div class="row"><!--circle_row -->
+  <div class="col-md-12">
+       <div id="banner-photo">
           <span>
             <p>MA</p>
           </span>
         </div>
-        <!--div><circle div >
-          <div class="line">
-         <div class="circle">MA</div>
-        </div -->
 
-<div>
+       <!-- div id="under_photo"><!circle div -->
+      <!--    <div class="line"></div>
+         <div class="circle"><p>MA<p></div>
+        </div>
+   </div><col md 12 end >
+</div--><!--circle_row -->
 
-    </div ><!--film  end -->
-
-    <div  id="title_holder">
+<!-- <div class="row">
+    <div class="col-md-12" id="title_holder">
          <h1 id="splash_title"><%= title %></h1>
     </div>
+<div class="row"> -->
+  </div ><!--film  end -->
+
 
   </body>
 </html>
