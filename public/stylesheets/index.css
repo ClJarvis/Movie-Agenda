@@ -125,7 +125,7 @@ input {
   margin-left: 360px;
 }
 
-/*.line{
+.line{
    border-bottom: solid 3px #DC4C18;
    height: 24px;
    z-index: 1;
@@ -145,7 +145,7 @@ input {
 
 .circle p {
   text-align: center;
- /* width: 88px;
+  width: 88px;
   height: 88px;
   margin-top: -95px;
   background-color: #FFC957;
@@ -156,7 +156,9 @@ input {
   font-family: 'bebas_neueregular';
 
 
-}*/
+}
+
+
 
 #filler {
   height: 100px;
